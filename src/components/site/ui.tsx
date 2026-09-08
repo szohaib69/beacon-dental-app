@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Star, Phone, CalendarCheck, Info } from "lucide-react";
 import { clinic } from "@/config/clinic";
 import { cn } from "@/lib/utils";
+import { Reveal } from "./Reveal";
 
 export function SectionHeading({
   eyebrow,
@@ -18,7 +19,7 @@ export function SectionHeading({
   as?: "h1" | "h2";
 }) {
   return (
-    <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
+    <Reveal className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
       {eyebrow && (
         <p className="eyebrow">
           <span className="h-px w-6 bg-accent" aria-hidden="true" />
@@ -29,7 +30,7 @@ export function SectionHeading({
       {description && (
         <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{description}</p>
       )}
-    </div>
+    </Reveal>
   );
 }
 
@@ -65,16 +66,20 @@ export function PageHero({
   );
 }
 
+const buttonBase =
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-sm font-semibold sm:w-auto md:text-base";
+
 export function BookButton({ className, label = "Book an Appointment" }: { className?: string; label?: string }) {
   return (
     <Link
       to="/book-appointment"
       className={cn(
-        "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift md:text-base",
+        buttonBase,
+        "bg-primary text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift",
         className,
       )}
     >
-      <CalendarCheck className="size-4" aria-hidden="true" />
+      <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
       {label}
     </Link>
   );
@@ -85,11 +90,12 @@ export function CallButton({ className, label }: { className?: string; label?: s
     <a
       href={clinic.contact.phoneHref}
       className={cn(
-        "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold text-primary transition-colors hover:bg-secondary md:text-base",
+        buttonBase,
+        "border border-border bg-background text-primary transition-colors hover:bg-secondary",
         className,
       )}
     >
-      <Phone className="size-4" aria-hidden="true" />
+      <Phone className="size-4 shrink-0" aria-hidden="true" />
       {label ?? `Call ${clinic.contact.phoneDisplay}`}
     </a>
   );
@@ -127,19 +133,19 @@ export function CtaBand({
         <div className="navy-gradient overflow-hidden rounded-3xl px-6 py-12 text-center shadow-lift md:px-16 md:py-16">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold text-primary-foreground md:text-4xl">{title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-primary-foreground/75">{body}</p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mx-auto mt-8 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:max-w-none sm:flex-row">
             <Link
               to="/book-appointment"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-background px-7 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 md:text-base"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-background px-7 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 sm:w-auto md:text-base"
             >
-              <CalendarCheck className="size-4" aria-hidden="true" />
+              <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
               Book an Appointment
             </Link>
             <a
               href={clinic.contact.phoneHref}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-primary-foreground/25 px-7 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:text-base"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-primary-foreground/25 px-7 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10 sm:w-auto md:text-base"
             >
-              <Phone className="size-4" aria-hidden="true" />
+              <Phone className="size-4 shrink-0" aria-hidden="true" />
               {clinic.contact.phoneDisplay}
             </a>
           </div>

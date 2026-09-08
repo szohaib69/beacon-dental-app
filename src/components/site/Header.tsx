@@ -67,21 +67,22 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden shrink-0 items-center gap-2 lg:flex">
             <a
               href={clinic.contact.phoneHref}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
             >
-              <Phone className="size-4" aria-hidden="true" />
-              <span className="hidden xl:inline">{clinic.contact.phoneDisplay}</span>
-              <span className="xl:hidden">Call Us</span>
+              <Phone className="size-4 shrink-0" aria-hidden="true" />
+              <span className="hidden 2xl:inline">{clinic.contact.phoneDisplay}</span>
+              <span className="2xl:hidden">Call</span>
             </a>
             <Link
               to="/book-appointment"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
             >
-              <CalendarCheck className="size-4" aria-hidden="true" />
-              Book an Appointment
+              <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
+              <span className="hidden xl:inline">Book an Appointment</span>
+              <span className="xl:hidden">Book Now</span>
             </Link>
           </div>
 
@@ -110,7 +111,10 @@ export function Header() {
       {open && (
         <div
           id="mobile-nav"
-          className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto border-t border-border bg-background px-5 pb-28 pt-5 xl:hidden"
+          className={cn(
+            "fixed inset-x-0 bottom-0 z-40 animate-fade-in overflow-y-auto border-t border-border bg-background px-5 pb-28 pt-5 xl:hidden",
+            scrolled ? "top-16" : "top-20",
+          )}
         >
           <nav aria-label="Mobile">
             <ul className="space-y-1">
