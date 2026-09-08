@@ -132,19 +132,19 @@ export function CtaBand({
         <div className="navy-gradient overflow-hidden rounded-3xl px-6 py-12 text-center shadow-lift md:px-16 md:py-16">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold text-primary-foreground md:text-4xl">{title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-primary-foreground/75">{body}</p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="mx-auto mt-8 flex w-full max-w-md flex-col items-center justify-center gap-3 sm:max-w-none sm:flex-row">
             <Link
               to="/book-appointment"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-background px-7 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 md:text-base"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-background px-7 text-sm font-semibold text-primary transition-transform hover:-translate-y-0.5 sm:w-auto md:text-base"
             >
-              <CalendarCheck className="size-4" aria-hidden="true" />
+              <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
               Book an Appointment
             </Link>
             <a
               href={clinic.contact.phoneHref}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-primary-foreground/25 px-7 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:text-base"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-primary-foreground/25 px-7 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10 sm:w-auto md:text-base"
             >
-              <Phone className="size-4" aria-hidden="true" />
+              <Phone className="size-4 shrink-0" aria-hidden="true" />
               {clinic.contact.phoneDisplay}
             </a>
           </div>
