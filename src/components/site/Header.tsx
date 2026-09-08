@@ -70,7 +70,7 @@ export function Header() {
           <div className="hidden shrink-0 items-center gap-2 lg:flex">
             <a
               href={clinic.contact.phoneHref}
-              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border px-3.5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-secondary 2xl:px-4"
             >
               <Phone className="size-4 shrink-0" aria-hidden="true" />
               <span className="hidden 2xl:inline">{clinic.contact.phoneDisplay}</span>
@@ -78,7 +78,7 @@ export function Header() {
             </a>
             <Link
               to="/book-appointment"
-              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift 2xl:px-5"
             >
               <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
               <span className="hidden xl:inline">Book an Appointment</span>
