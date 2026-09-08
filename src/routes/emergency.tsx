@@ -7,11 +7,11 @@ import { CtaBand, SectionHeading } from "@/components/site/ui";
 export const Route = createFileRoute("/emergency")({
   head: () => ({
     meta: [
-      { title: `Emergency Dentist in [CITY], [STATE] | ${clinic.name}` },
+      { title: `Emergency Dentist in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         name: "description",
         content:
-          "Need a dentist today? Same-day emergency dental care in [CITY], [STATE] for toothaches, broken teeth, knocked-out teeth, swelling and dental infections.",
+          "Need a dentist today? Same-day emergency dental care in Ilkley, West Yorkshire for toothaches, broken teeth, knocked-out teeth, swelling and dental infections.",
       },
       { property: "og:title", content: "Need a Dentist Today?" },
       { property: "og:description", content: "Same-day emergency dental care for urgent problems." },

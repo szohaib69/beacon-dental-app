@@ -7,11 +7,11 @@ import { CtaBand, DemoNote, PageHero, SectionHeading } from "@/components/site/u
 export const Route = createFileRoute("/patient-resources")({
   head: () => ({
     meta: [
-      { title: `Patient Resources & Forms | ${clinic.name} in [CITY], [STATE]` },
+      { title: `Patient Resources & Forms | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:
-          "New patient information, what to expect at your first visit, printable forms, aftercare instructions and emergency guidance for our [CITY], [STATE] dental patients.",
+          "New patient information, what to expect at your first visit, printable forms, aftercare instructions and emergency guidance for our Ilkley, West Yorkshire dental patients.",
       },
       { property: "og:title", content: "Patient Resources" },
       { property: "og:description", content: "Forms, first-visit guidance and aftercare instructions." },

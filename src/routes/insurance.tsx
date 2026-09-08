@@ -6,11 +6,11 @@ import { CtaBand, DemoNote, PageHero, SectionHeading } from "@/components/site/u
 export const Route = createFileRoute("/insurance")({
   head: () => ({
     meta: [
-      { title: `Dental Insurance & Financing | ${clinic.name} in [CITY], [STATE]` },
+      { title: `Dental Insurance & Financing | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:
-          "How dental insurance, verification, estimates and payment options work at our [CITY], [STATE] practice — including options for patients without insurance.",
+          "How dental insurance, verification, estimates and payment options work at our Ilkley, West Yorkshire practice — including options for patients without insurance.",
       },
       { property: "og:title", content: "Insurance & Financing" },
       { property: "og:description", content: "Making quality dental care more accessible." },

@@ -19,7 +19,7 @@ export const Route = createFileRoute("/team/$slug")({
     return {
       meta: [
         { title },
-        { name: "description", content: `${d.specialty} at ${clinic.name} in [CITY], [STATE]. ${d.bio}` },
+        { name: "description", content: `${d.specialty} at ${clinic.name} in Ilkley, West Yorkshire. ${d.bio}` },
         { property: "og:title", content: title },
         { property: "og:description", content: d.specialty },
         { property: "og:type", content: "profile" },

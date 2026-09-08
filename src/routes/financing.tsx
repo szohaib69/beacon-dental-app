@@ -9,7 +9,7 @@ export const Route = createFileRoute("/financing")({
       {
         name: "description",
         content:
-          "Payment options and monthly financing for dental treatment in [CITY], [STATE], including self-pay guidance and written estimates before treatment.",
+          "Payment options and monthly financing for dental treatment in Ilkley, West Yorkshire, including self-pay guidance and written estimates before treatment.",
       },
       { property: "og:title", content: "Dental Financing & Payment Plans" },
       { property: "og:description", content: "Flexible ways to pay for the dental care you need." },

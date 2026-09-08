@@ -7,7 +7,7 @@ import { CtaBand, PageHero } from "@/components/site/ui";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: `Dental FAQs | ${clinic.name} in [CITY], [STATE]` },
+      { title: `Dental FAQs | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:

@@ -46,7 +46,7 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Comprehensive family and cosmetic dentistry in [CITY], [STATE] — delivered with
+              Comprehensive family and cosmetic dentistry in Ilkley, West Yorkshire — delivered with
               compassion, comfort and modern technology.
             </p>
             <ul className="mt-5 flex gap-2">

@@ -8,11 +8,11 @@ import { DemoNote, PageHero } from "@/components/site/ui";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: `Contact Our Dental Office in [CITY], [STATE] | ${clinic.name}` },
+      { title: `Contact Our Dental Office in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         name: "description",
         content:
-          "Get in touch with our [CITY], [STATE] dental office — address, phone, email, opening hours, parking and directions.",
+          "Get in touch with our Ilkley, West Yorkshire dental office — address, phone, email, opening hours, parking and directions.",
       },
       { property: "og:title", content: `Contact ${clinic.name}` },
       { property: "og:description", content: "Address, phone, hours and directions to our dental office." },

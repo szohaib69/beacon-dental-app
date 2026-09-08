@@ -11,7 +11,7 @@ export const Route = createFileRoute("/blog/")({
       {
         name: "description",
         content:
-          "Practical dental education from our [CITY], [STATE] team — oral health, preventive care, cosmetic dentistry, implants, children's dentistry and emergencies.",
+          "Practical dental education from our Ilkley, West Yorkshire team — oral health, preventive care, cosmetic dentistry, implants, children's dentistry and emergencies.",
       },
       { property: "og:title", content: "Dental Resources & Patient Education" },
       { property: "og:description", content: "Practical dental articles written for patients." },
