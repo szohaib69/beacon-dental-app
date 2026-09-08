@@ -7,67 +7,71 @@ const sections: Section[] = [
   {
     heading: "About this notice",
     paragraphs: [
-      "A Notice of Privacy Practices describes how a healthcare provider may use and disclose protected health information (PHI) and the rights patients have regarding that information.",
-      "The text below is a placeholder outline only. It is not a compliant notice and must be replaced with one prepared for the practice.",
+      "This notice outlines how the practice handles personal and health information under UK data protection law (UK GDPR and the Data Protection Act 2018).",
+      "The text below is a placeholder outline only. It must be replaced with a privacy notice prepared for the practice before launch.",
     ],
   },
   {
-    heading: "How health information may be used",
+    heading: "Information we hold",
     paragraphs: [
-      "Placeholder: describe permitted uses for treatment, payment and healthcare operations, and any uses requiring written authorization.",
+      "Placeholder: describe the personal details, medical history, clinical records, images and payment information the practice keeps, and where they come from.",
     ],
   },
   {
-    heading: "Your rights regarding your health information",
+    heading: "How your information is used",
     paragraphs: [
-      "Placeholder: describe the right to inspect and copy records, request amendments, request an accounting of disclosures, request restrictions, request confidential communications, and obtain a paper copy of the notice.",
+      "Placeholder: describe use for providing dental care, appointment reminders, billing, and any legal or regulatory obligations, together with the lawful basis relied on for each purpose.",
     ],
   },
   {
-    heading: "Practice responsibilities",
+    heading: "Your rights",
     paragraphs: [
-      "Placeholder: describe the practice's obligations to safeguard PHI, provide this notice, and abide by its terms.",
+      "Placeholder: describe the right of access, rectification, erasure, restriction, objection and data portability, and how to make a request.",
     ],
   },
   {
-    heading: "Complaints",
+    heading: "Sharing and retention",
     paragraphs: [
-      `Placeholder: describe how to file a complaint with the practice and with the appropriate federal agency. Practice contact: ${clinic.contact.email}, ${clinic.contact.phoneDisplay}.`,
+      "Placeholder: describe who information may be shared with (for example laboratories, referral specialists, NHS bodies) and how long dental records are retained.",
+    ],
+  },
+  {
+    heading: "Questions and complaints",
+    paragraphs: [
+      `Placeholder: describe how to raise a concern with the practice and how to complain to the Information Commissioner's Office. Practice contact: ${clinic.contact.email}, ${clinic.contact.phoneDisplay}.`,
     ],
   },
   {
     heading: "Important limitation about this website",
     paragraphs: [
-      "This website is a public marketing website. Publishing a privacy page does not by itself make a website HIPAA compliant, and the forms on this site are not a secure channel for protected health information. Do not submit medical details through them — call the office instead.",
+      "This is a public marketing website. The forms on this site are not a secure channel for health information — please do not submit medical details through them. Call the practice instead.",
     ],
   },
 ];
 
-export const Route = createFileRoute("/hipaa-notice")({
+export const Route = createFileRoute("/data-protection")({
   head: () => ({
     meta: [
-      { title: `HIPAA Privacy Notice (Placeholder) | ${clinic.name}` },
-      { name: "description", content: "Placeholder outline of a Notice of Privacy Practices for protected health information." },
-      { property: "og:title", content: "HIPAA Privacy Notice" },
-      { property: "og:description", content: "Notice of Privacy Practices placeholder outline." },
-      { property: "og:url", content: "/hipaa-notice" },
+      { title: `Data Protection & Privacy Notice | ${clinic.name}` },
+      { name: "description", content: "Placeholder outline of how Ilkley Dental Care handles patient information under UK data protection law." },
+      { property: "og:title", content: "Data Protection & Privacy Notice" },
+      { property: "og:description", content: "How patient information is handled under UK GDPR — placeholder outline." },
+      { property: "og:url", content: "/data-protection" },
     ],
-    links: [{ rel: "canonical", href: "/hipaa-notice" }],
+    links: [{ rel: "canonical", href: "/data-protection" }],
   }),
   component: () => (
     <>
       <PageHero
         eyebrow="Legal"
-        title="HIPAA Privacy Notice"
-        description="Notice of Privacy Practices — placeholder outline pending a compliant document prepared for the practice."
+        title="Data Protection & Privacy Notice"
+        description="How patient information is handled — placeholder outline pending a notice prepared for the practice."
       />
       <section className="section-y">
         <div className="container-page max-w-3xl">
           <DemoNote>
-            This is not a compliant HIPAA Notice of Privacy Practices and no claim of HIPAA
-            compliance is made by publishing it. A qualified professional must prepare the
-            practice's actual notice, and technical, administrative and physical safeguards must be
-            implemented separately.
+            This is a placeholder outline, not a completed privacy notice. The practice should have
+            its own UK GDPR privacy notice prepared and published here.
           </DemoNote>
           <LegalBody sections={sections} />
         </div>
