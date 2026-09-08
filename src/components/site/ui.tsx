@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Star, Phone, CalendarCheck, Info } from "lucide-react";
 import { clinic } from "@/config/clinic";
 import { cn } from "@/lib/utils";
+import { Reveal } from "./Reveal";
 
 export function SectionHeading({
   eyebrow,
