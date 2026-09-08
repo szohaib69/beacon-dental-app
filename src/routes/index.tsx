@@ -48,45 +48,98 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
+  const heroRef = useRef<HTMLElement | null>(null);
+  const imageRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced || !heroRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from("[data-hero-item]", {
+        y: 24,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out",
+        stagger: 0.09,
+      });
+      gsap.from("[data-hero-visual]", {
+        scale: 0.96,
+        opacity: 0,
+        duration: 0.9,
+        ease: "power3.out",
+        delay: 0.15,
+      });
+    }, heroRef);
+
+    let frame = 0;
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const el = imageRef.current;
+        if (!el) return;
+        const offset = Math.min(window.scrollY, 600) * 0.06;
+        gsap.set(el, { y: offset });
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+      ctx.revert();
+    };
+  }, []);
+
   return (
     <>
       {/* HERO */}
-      <section className="hero-gradient relative overflow-hidden">
-        <div className="container-page py-12 md:py-20">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
-            <div className="rise-in">
-              <p className="eyebrow">
+      <section ref={heroRef} className="hero-gradient relative overflow-hidden">
+        <div className="container-page py-12 md:py-20 lg:pb-28">
+          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+            <div>
+              <p className="eyebrow" data-hero-item>
                 <span className="h-px w-6 bg-accent" aria-hidden="true" />
                 Family &amp; Cosmetic Dentistry in [CITY], [STATE]
               </p>
-              <h1 className="mt-4 text-[2.5rem] font-extrabold leading-[1.05] text-primary sm:text-5xl lg:text-[3.75rem]">
+              <h1
+                data-hero-item
+                className="mt-4 text-[2.5rem] font-extrabold leading-[1.05] text-primary sm:text-5xl lg:text-[3.75rem]"
+              >
                 Confident Smiles
                 <br />
                 Start Here
               </h1>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p
+                data-hero-item
+                className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              >
                 Comprehensive dental care for you and your family, delivered with compassion,
                 comfort, and modern technology.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div
+                data-hero-item
+                className="mt-8 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:items-center"
+              >
                 <Link
                   to="/book-appointment"
-                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
+                  className="inline-flex min-h-13 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
                 >
-                  <CalendarCheck className="size-5" aria-hidden="true" />
+                  <CalendarCheck className="size-5 shrink-0" aria-hidden="true" />
                   Book an Appointment
                 </Link>
                 <a
                   href={clinic.contact.phoneHref}
-                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-base font-semibold text-primary transition-colors hover:bg-secondary"
+                  className="inline-flex min-h-13 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-border bg-background px-7 py-3.5 text-base font-semibold text-primary transition-colors hover:bg-secondary"
                 >
-                  <Phone className="size-5" aria-hidden="true" />
+                  <Phone className="size-5 shrink-0" aria-hidden="true" />
                   Call Our Office
                 </a>
               </div>
 
-              <ul className="mt-9 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+              <ul data-hero-item className="mt-9 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                 {clinic.trustPoints.map((point) => (
                   <li key={point} className="flex items-center gap-2.5 text-sm font-medium text-foreground">
                     <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-mint">
@@ -98,31 +151,32 @@ function Home() {
               </ul>
             </div>
 
-            <div className="relative">
+            <div className="relative" data-hero-visual>
               <div className="overflow-hidden rounded-[2rem] shadow-float">
                 <img
+                  ref={imageRef}
                   src={heroImg}
                   alt="Bright, modern dental clinic reception and treatment area with natural light"
                   width={1600}
                   height={1104}
                   fetchPriority="high"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full scale-105 object-cover will-change-transform"
                 />
               </div>
 
               {/* Floating appointment card */}
-              <div className="mt-[-2rem] mx-4 surface-card relative z-10 p-5 shadow-float md:absolute md:-bottom-8 md:-left-8 md:m-0 md:w-72">
+              <div className="surface-card relative z-10 mx-4 mt-[-2rem] p-5 shadow-float md:absolute md:-bottom-10 md:left-0 md:m-0 md:w-64 md:translate-x-[-12%] lg:-bottom-14">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-accent-foreground">
                   Next Available
                 </p>
                 <p className="mt-2 font-display text-lg font-bold text-primary">Same-week openings</p>
                 <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
-                    <Clock className="size-4 text-primary" aria-hidden="true" />
+                    <Clock className="size-4 shrink-0 text-primary" aria-hidden="true" />
                     Mon–Thu 8:00 AM – 5:00 PM
                   </li>
                   <li className="flex items-center gap-2">
-                    <MapPin className="size-4 text-primary" aria-hidden="true" />
+                    <MapPin className="size-4 shrink-0 text-primary" aria-hidden="true" />
                     {clinic.address.city}, {clinic.address.state}
                   </li>
                 </ul>
