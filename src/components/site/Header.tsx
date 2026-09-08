@@ -111,7 +111,10 @@ export function Header() {
       {open && (
         <div
           id="mobile-nav"
-          className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto border-t border-border bg-background px-5 pb-28 pt-5 xl:hidden"
+          className={cn(
+            "fixed inset-x-0 bottom-0 z-40 animate-fade-in overflow-y-auto border-t border-border bg-background px-5 pb-28 pt-5 xl:hidden",
+            scrolled ? "top-16" : "top-20",
+          )}
         >
           <nav aria-label="Mobile">
             <ul className="space-y-1">
