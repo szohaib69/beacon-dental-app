@@ -161,9 +161,10 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/hipaa-notice" className="transition-colors hover:text-primary">
-                HIPAA Privacy Notice
+              <Link to="/data-protection" className="transition-colors hover:text-primary">
+                Data Protection
               </Link>
+
             </li>
           </ul>
         </div>
