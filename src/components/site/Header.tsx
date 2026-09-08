@@ -67,21 +67,22 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden shrink-0 items-center gap-2 lg:flex">
             <a
               href={clinic.contact.phoneHref}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-secondary"
             >
-              <Phone className="size-4" aria-hidden="true" />
-              <span className="hidden xl:inline">{clinic.contact.phoneDisplay}</span>
-              <span className="xl:hidden">Call Us</span>
+              <Phone className="size-4 shrink-0" aria-hidden="true" />
+              <span className="hidden 2xl:inline">{clinic.contact.phoneDisplay}</span>
+              <span className="2xl:hidden">Call</span>
             </a>
             <Link
               to="/book-appointment"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
+              className="inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
             >
-              <CalendarCheck className="size-4" aria-hidden="true" />
-              Book an Appointment
+              <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
+              <span className="hidden xl:inline">Book an Appointment</span>
+              <span className="xl:hidden">Book Now</span>
             </Link>
           </div>
 
