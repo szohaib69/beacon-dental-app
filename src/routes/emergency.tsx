@@ -108,7 +108,7 @@ function Emergency() {
               <li>• High fever with facial swelling</li>
             </ul>
             <p className="mt-5 text-sm font-semibold text-destructive">
-              In these situations, call 911 or go to the nearest emergency room.
+              In these situations, call 999 or go to your nearest A&E.
             </p>
           </div>
         </div>
