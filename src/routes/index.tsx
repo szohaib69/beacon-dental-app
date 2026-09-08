@@ -223,12 +223,6 @@ function Home() {
               </div>
             ))}
           </dl>
-          <div className="mx-auto mt-6 max-w-2xl">
-            <DemoNote>
-              These figures are demo placeholders for layout purposes and are not verified
-              statistics. Replace them with the practice's own confirmed numbers.
-            </DemoNote>
-          </div>
         </div>
       </section>
 
