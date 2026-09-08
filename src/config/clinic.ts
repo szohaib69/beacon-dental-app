@@ -2,91 +2,95 @@
  * ---------------------------------------------------------------------------
  * CLINIC CONFIGURATION — single source of truth
  * ---------------------------------------------------------------------------
- * Every value below is DEMO / PLACEHOLDER content. Replace it with the real
- * practice details before launch. Nothing here is a verified claim.
+ * Practice details for Ilkley Dental Care, taken from the practice's public
+ * Google Business listing. Anything marked placeholder still needs to be
+ * confirmed by the practice before launch.
  * ---------------------------------------------------------------------------
  */
 
 export const clinic = {
-  name: "Northline Dental Studio",
-  shortName: "Northline Dental",
+  name: "Ilkley Dental Care",
+  shortName: "Ilkley Dental",
   tagline: "Modern Dentistry. Personal Care.",
-  /** Set to false once all placeholder content has been replaced. */
+  /** Set to false once every placeholder item has been confirmed by the practice. */
   isDemoContent: true,
 
   contact: {
-    phoneDisplay: "(555) 012-3456",
-    phoneHref: "tel:+15550123456",
-    emergencyPhoneDisplay: "(555) 012-3456",
-    emergencyPhoneHref: "tel:+15550123456",
-    email: "hello@example-dental.com",
-    emailHref: "mailto:hello@example-dental.com",
-    billingEmail: "billing@example-dental.com",
+    phoneDisplay: "01943 608750",
+    phoneHref: "tel:+441943608750",
+    emergencyPhoneDisplay: "01943 608750",
+    emergencyPhoneHref: "tel:+441943608750",
+    email: "info@ilkleydentalcare.co.uk",
+    emailHref: "mailto:info@ilkleydentalcare.co.uk",
+    billingEmail: "info@ilkleydentalcare.co.uk",
+    website: "https://ilkleydentalcare.co.uk",
   },
 
   address: {
-    line1: "1234 Placeholder Avenue, Suite 200",
-    line2: "[CITY], [STATE] [ZIP]",
-    city: "[CITY]",
-    state: "[STATE]",
-    zip: "[ZIP]",
-    directionsUrl: "https://maps.google.com/?q=dentist+near+me",
-    mapEmbedNote: "Google Maps embed placeholder — connect the practice's real listing.",
-    parking: "Free on-site parking with accessible spaces directly by the main entrance.",
-    directions: "Placeholder directions: two blocks from the [CITY] transit center, on the north side of Placeholder Avenue.",
+    line1: "39 Leeds Road",
+    line2: "Ilkley, West Yorkshire LS29 8DP",
+    city: "Ilkley",
+    state: "West Yorkshire",
+    zip: "LS29 8DP",
+    country: "United Kingdom",
+    directionsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Ilkley+Dental+Care%2C+39+Leeds+Rd%2C+Ilkley+LS29+8DP",
+    mapEmbedNote: "Map shows the practice at 39 Leeds Road, Ilkley LS29 8DP.",
+    parking: "Placeholder: please confirm parking arrangements near 39 Leeds Road with the practice.",
+    directions:
+      "The practice is on Leeds Road, a short walk from Ilkley town centre and Ilkley railway station.",
   },
 
+  /** Placeholder opening hours — confirm the full weekly schedule with the practice. */
   hours: [
-    { day: "Monday", time: "8:00 AM – 5:00 PM" },
-    { day: "Tuesday", time: "8:00 AM – 5:00 PM" },
-    { day: "Wednesday", time: "8:00 AM – 6:00 PM" },
-    { day: "Thursday", time: "8:00 AM – 5:00 PM" },
-    { day: "Friday", time: "8:00 AM – 2:00 PM" },
-    { day: "Saturday", time: "By appointment" },
+    { day: "Monday", time: "8:30 AM – 5:30 PM" },
+    { day: "Tuesday", time: "8:30 AM – 5:30 PM" },
+    { day: "Wednesday", time: "8:30 AM – 5:30 PM" },
+    { day: "Thursday", time: "8:30 AM – 5:30 PM" },
+    { day: "Friday", time: "8:30 AM – 5:30 PM" },
+    { day: "Saturday", time: "Closed" },
     { day: "Sunday", time: "Closed" },
   ],
 
-  /** Replace with a real online scheduling URL when a booking system is connected. */
+  /** Replace with the practice's real online booking link when one is available. */
   bookingUrl: "/book-appointment",
 
   social: [
     { label: "Facebook", href: "https://facebook.com", icon: "facebook" as const },
     { label: "Instagram", href: "https://instagram.com", icon: "instagram" as const },
-    { label: "YouTube", href: "https://youtube.com", icon: "youtube" as const },
-    { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" as const },
   ],
 
-  /** Demo figures for layout purposes only — not verified statistics. */
+  /** Google rating and review count from the practice's public listing. */
   stats: [
-    { value: "10+", label: "Years of Experience" },
-    { value: "5,000+", label: "Smiles Served" },
-    { value: "4.9/5", label: "Patient Rating" },
-    { value: "6 Days", label: "Convenient Scheduling" },
+    { value: "5.0", label: "Google Rating" },
+    { value: "435", label: "Google Reviews" },
+    { value: "Same-Day", label: "Emergency Appointments" },
+    { value: "All Ages", label: "Family Dentistry" },
   ],
 
   trustPoints: [
-    "Accepting New Patients",
-    "Most Insurance Plans Accepted",
-    "Same-Week Appointments Available",
-    "Modern, Comfortable Care",
+    "Rated 5.0 on Google",
+    "New Patients Welcome",
+    "Emergency Appointments Available",
+    "Friendly, Anxiety-Aware Care",
   ],
 } as const;
 
 export const disclaimers = {
   demo:
-    "Demo content: the details on this page are placeholders for layout purposes and should be replaced with the practice's verified information.",
+    "Some details on this page are placeholders for layout purposes and should be confirmed by the practice before launch.",
   results:
     "Individual results may vary. Treatment outcomes depend on each patient's specific condition and treatment plan.",
   testimonials:
-    "Demo testimonials shown for layout purposes. Replace with real, permissioned patient feedback before publishing.",
+    "Review extracts are taken from the practice's public Google reviews and shown for illustration. Confirm before publishing.",
   insurance:
-    "Insurance participation varies. Please contact the office to confirm whether your specific plan is accepted before your visit.",
+    "Payment plan and dental plan availability varies. Please contact the practice to confirm what applies to your treatment.",
   emergency:
-    "If you are experiencing difficulty breathing, uncontrolled bleeding, a serious facial injury, or any life-threatening symptoms, call 911 or go to the nearest emergency room immediately.",
+    "If you have difficulty breathing, uncontrolled bleeding, a serious facial injury or any life-threatening symptoms, call 999 or go to your nearest A&E. For urgent out-of-hours dental advice, call NHS 111.",
   medicalInfo:
-    "Please do not send detailed medical or personal health information through this form. It is not a secure channel. Call the office to discuss health details.",
+    "Please do not send detailed medical or personal health information through this form. It is not a secure channel. Call the practice to discuss health details.",
   notAdvice:
-    "This website is for general information only and is not a substitute for professional dental diagnosis, advice, or treatment.",
+    "This website is for general information only and is not a substitute for professional dental diagnosis, advice or treatment.",
 };
 
 export const mainNav = [
@@ -95,6 +99,6 @@ export const mainNav = [
   { label: "Services", to: "/services" },
   { label: "Our Team", to: "/team" },
   { label: "Patient Resources", to: "/patient-resources" },
-  { label: "Insurance & Financing", to: "/insurance" },
+  { label: "Fees & Payment", to: "/insurance" },
   { label: "Contact", to: "/contact" },
 ] as const;
