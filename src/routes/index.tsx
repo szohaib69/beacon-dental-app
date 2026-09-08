@@ -240,23 +240,25 @@ function Home() {
             description="From routine cleanings to full-mouth restoration, every stage of your care happens with a team that already knows your history."
           />
           <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <li key={s.slug}>
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-primary/25 hover:shadow-lift"
-                >
-                  <span className="flex size-12 items-center justify-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <ServiceIcon name={s.icon} className="size-6" />
-                  </span>
-                  <h3 className="mt-5 font-display text-lg font-bold text-primary">{s.title}</h3>
-                  <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">{s.short}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-                    Learn More
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </span>
-                </Link>
+                <Reveal delay={(i % 3) * 0.07} className="h-full">
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
+                    className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-primary/25 hover:shadow-lift"
+                  >
+                    <span className="flex size-12 items-center justify-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                      <ServiceIcon name={s.icon} className="size-6" />
+                    </span>
+                    <h3 className="mt-5 font-display text-lg font-bold text-primary">{s.title}</h3>
+                    <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">{s.short}</p>
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                      Learn More
+                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                    </span>
+                  </Link>
+                </Reveal>
               </li>
             ))}
           </ul>
