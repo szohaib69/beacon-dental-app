@@ -54,8 +54,8 @@ function PatientResources() {
             <div className="surface-card p-7">
               <h3 className="font-display text-lg font-bold text-primary">What to bring</h3>
               <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-muted-foreground">
-                <li>• A photo ID</li>
-                <li>• Your dental insurance card, if you have one</li>
+                <li>• Photo ID, if you have it</li>
+                <li>• Details of any medical conditions and medicines you take</li>
                 <li>• A list of current medications and known allergies</li>
                 <li>• Recent X-rays or records from a previous dentist, if available</li>
                 <li>• Completed intake forms, if you filled them out at home</li>
