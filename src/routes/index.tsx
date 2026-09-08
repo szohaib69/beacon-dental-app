@@ -168,7 +168,7 @@ function Home() {
               </div>
 
               {/* Floating appointment card */}
-              <div className="surface-card relative z-10 mx-4 mt-[-2rem] p-5 shadow-float md:absolute md:-bottom-10 md:left-0 md:m-0 md:w-64 md:translate-x-[-12%] lg:-bottom-14">
+              <div className="surface-card relative z-10 mx-4 mt-[-2rem] p-5 shadow-float sm:mx-auto sm:max-w-sm md:absolute md:-bottom-8 md:left-8 md:m-0 md:w-72 md:max-w-none">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-accent-foreground">
                   Next Available
                 </p>
