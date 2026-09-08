@@ -17,13 +17,13 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `Dentist in [CITY], [STATE] | ${clinic.name}` },
+      { title: `Dentist in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         name: "description",
         content:
-          "Confident smiles start here. Family, cosmetic, implant and emergency dentistry in [CITY], [STATE]. Accepting new patients — request an appointment today.",
+          "Confident smiles start here. Family, cosmetic, implant and emergency dentistry in Ilkley, West Yorkshire. Accepting new patients — request an appointment today.",
       },
-      { property: "og:title", content: `Dentist in [CITY], [STATE] | ${clinic.name}` },
+      { property: "og:title", content: `Dentist in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         property: "og:description",
         content:
@@ -104,7 +104,7 @@ function Home() {
             <div>
               <p className="eyebrow" data-hero-item>
                 <span className="h-px w-6 bg-accent" aria-hidden="true" />
-                Family &amp; Cosmetic Dentistry in [CITY], [STATE]
+                Family &amp; Cosmetic Dentistry in Ilkley, West Yorkshire
               </p>
               <h1
                 data-hero-item

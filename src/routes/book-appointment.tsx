@@ -9,7 +9,7 @@ import { DemoNote, PageHero } from "@/components/site/ui";
 export const Route = createFileRoute("/book-appointment")({
   head: () => ({
     meta: [
-      { title: `Request an Appointment | ${clinic.name} in [CITY], [STATE]` },
+      { title: `Request an Appointment | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:

@@ -14,10 +14,10 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as BookAppointmentRouteImport } from './routes/book-appointment'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DataProtectionRouteImport } from './routes/data-protection'
 import { Route as EmergencyRouteImport } from './routes/emergency'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FinancingRouteImport } from './routes/financing'
-import { Route as HipaaNoticeRouteImport } from './routes/hipaa-notice'
 import { Route as InsuranceRouteImport } from './routes/insurance'
 import { Route as PatientResourcesRouteImport } from './routes/patient-resources'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
@@ -54,6 +54,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DataProtectionRoute = DataProtectionRouteImport.update({
+  id: '/data-protection',
+  path: '/data-protection',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EmergencyRoute = EmergencyRouteImport.update({
   id: '/emergency',
   path: '/emergency',
@@ -67,11 +72,6 @@ const FaqRoute = FaqRouteImport.update({
 const FinancingRoute = FinancingRouteImport.update({
   id: '/financing',
   path: '/financing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HipaaNoticeRoute = HipaaNoticeRouteImport.update({
-  id: '/hipaa-notice',
-  path: '/hipaa-notice',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InsuranceRoute = InsuranceRouteImport.update({
@@ -131,10 +131,10 @@ export interface FileRoutesByFullPath {
   '/accessibility': typeof AccessibilityRoute
   '/book-appointment': typeof BookAppointmentRoute
   '/contact': typeof ContactRoute
+  '/data-protection': typeof DataProtectionRoute
   '/emergency': typeof EmergencyRoute
   '/faq': typeof FaqRoute
   '/financing': typeof FinancingRoute
-  '/hipaa-notice': typeof HipaaNoticeRoute
   '/insurance': typeof InsuranceRoute
   '/patient-resources': typeof PatientResourcesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -152,10 +152,10 @@ export interface FileRoutesByTo {
   '/accessibility': typeof AccessibilityRoute
   '/book-appointment': typeof BookAppointmentRoute
   '/contact': typeof ContactRoute
+  '/data-protection': typeof DataProtectionRoute
   '/emergency': typeof EmergencyRoute
   '/faq': typeof FaqRoute
   '/financing': typeof FinancingRoute
-  '/hipaa-notice': typeof HipaaNoticeRoute
   '/insurance': typeof InsuranceRoute
   '/patient-resources': typeof PatientResourcesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -174,10 +174,10 @@ export interface FileRoutesById {
   '/accessibility': typeof AccessibilityRoute
   '/book-appointment': typeof BookAppointmentRoute
   '/contact': typeof ContactRoute
+  '/data-protection': typeof DataProtectionRoute
   '/emergency': typeof EmergencyRoute
   '/faq': typeof FaqRoute
   '/financing': typeof FinancingRoute
-  '/hipaa-notice': typeof HipaaNoticeRoute
   '/insurance': typeof InsuranceRoute
   '/patient-resources': typeof PatientResourcesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -197,10 +197,10 @@ export interface FileRouteTypes {
     | '/accessibility'
     | '/book-appointment'
     | '/contact'
+    | '/data-protection'
     | '/emergency'
     | '/faq'
     | '/financing'
-    | '/hipaa-notice'
     | '/insurance'
     | '/patient-resources'
     | '/privacy-policy'
@@ -218,10 +218,10 @@ export interface FileRouteTypes {
     | '/accessibility'
     | '/book-appointment'
     | '/contact'
+    | '/data-protection'
     | '/emergency'
     | '/faq'
     | '/financing'
-    | '/hipaa-notice'
     | '/insurance'
     | '/patient-resources'
     | '/privacy-policy'
@@ -239,10 +239,10 @@ export interface FileRouteTypes {
     | '/accessibility'
     | '/book-appointment'
     | '/contact'
+    | '/data-protection'
     | '/emergency'
     | '/faq'
     | '/financing'
-    | '/hipaa-notice'
     | '/insurance'
     | '/patient-resources'
     | '/privacy-policy'
@@ -261,10 +261,10 @@ export interface RootRouteChildren {
   AccessibilityRoute: typeof AccessibilityRoute
   BookAppointmentRoute: typeof BookAppointmentRoute
   ContactRoute: typeof ContactRoute
+  DataProtectionRoute: typeof DataProtectionRoute
   EmergencyRoute: typeof EmergencyRoute
   FaqRoute: typeof FaqRoute
   FinancingRoute: typeof FinancingRoute
-  HipaaNoticeRoute: typeof HipaaNoticeRoute
   InsuranceRoute: typeof InsuranceRoute
   PatientResourcesRoute: typeof PatientResourcesRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -314,6 +314,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/data-protection': {
+      id: '/data-protection'
+      path: '/data-protection'
+      fullPath: '/data-protection'
+      preLoaderRoute: typeof DataProtectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/emergency': {
       id: '/emergency'
       path: '/emergency'
@@ -333,13 +340,6 @@ declare module '@tanstack/react-router' {
       path: '/financing'
       fullPath: '/financing'
       preLoaderRoute: typeof FinancingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hipaa-notice': {
-      id: '/hipaa-notice'
-      path: '/hipaa-notice'
-      fullPath: '/hipaa-notice'
-      preLoaderRoute: typeof HipaaNoticeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insurance': {
@@ -421,10 +421,10 @@ const rootRouteChildren: RootRouteChildren = {
   AccessibilityRoute: AccessibilityRoute,
   BookAppointmentRoute: BookAppointmentRoute,
   ContactRoute: ContactRoute,
+  DataProtectionRoute: DataProtectionRoute,
   EmergencyRoute: EmergencyRoute,
   FaqRoute: FaqRoute,
   FinancingRoute: FinancingRoute,
-  HipaaNoticeRoute: HipaaNoticeRoute,
   InsuranceRoute: InsuranceRoute,
   PatientResourcesRoute: PatientResourcesRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,

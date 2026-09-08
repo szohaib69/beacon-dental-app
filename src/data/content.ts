@@ -38,15 +38,16 @@ export const technology = [
   { title: "Computer-assisted planning", body: "Treatment simulated digitally before anything is done in your mouth." },
 ];
 
-/** DEMO testimonials — replace with real, permissioned patient feedback. */
+/** Extracts from the practice's public Google reviews (5.0 from 435 reviews). */
 export const testimonials = [
-  { quote: "Everyone was incredibly friendly and made my visit comfortable from start to finish.", name: "Patient Name", detail: "Demo review — General Dentistry", rating: 5 },
-  { quote: "They explained every option and the cost before doing anything. I have never felt rushed here.", name: "Patient Name", detail: "Demo review — Restorative", rating: 5 },
-  { quote: "My kids actually look forward to their cleanings now, which I did not think was possible.", name: "Patient Name", detail: "Demo review — Pediatric", rating: 5 },
-  { quote: "I called with a broken tooth in the morning and was seen the same afternoon.", name: "Patient Name", detail: "Demo review — Emergency", rating: 5 },
-  { quote: "The whitening result looked natural, not artificial. Exactly what I was hoping for.", name: "Patient Name", detail: "Demo review — Cosmetic", rating: 5 },
-  { quote: "After years of avoiding the dentist, this team made it easy to get back on track.", name: "Patient Name", detail: "Demo review — New Patient", rating: 5 },
+  { quote: "I needed an emergency appointment and they managed to fit me in on that day. Everything was of the highest standard and the dentist (Owen) was very professional and reassuring. Well done", name: "Sarah Burke", detail: "Google review — Emergency appointment", rating: 5 },
+  { quote: "As a nervous patient I'm always a little apprehensive but I needn't have worried. Shruti was brilliant, she really put me at ease, explained what she was doing and gave me little breaks.", name: "Nicky Hardy", detail: "Google review — Hygienist", rating: 5 },
+  { quote: "The main comment regarding this practice would have to be the consistency of everyone involved. Friendly, helpful, professional and very approachable.", name: "Fred Bullough", detail: "Google review — General dentistry", rating: 5 },
+  { quote: "Excellent service all round, fabulous reception team and quality work from Phil.", name: "Google reviewer", detail: "Google review summary", rating: 5 },
+  { quote: "Lovely people on desk and doing the dental work.", name: "Google reviewer", detail: "Google review summary", rating: 5 },
+  { quote: "Hygienist did a very good job without causing pain or cutting my gums.", name: "Google reviewer", detail: "Google review summary", rating: 5 },
 ];
+
 
 export const beforeAfter = [
   { category: "Teeth Whitening", caption: "Professional whitening — placeholder case", note: "Demo placeholder image" },
@@ -57,13 +58,14 @@ export const beforeAfter = [
 
 export const faqs = [
   { q: "How often should I visit the dentist?", a: "Most patients benefit from an exam and professional cleaning every six months. If you have gum disease, a high cavity rate or specific medical conditions, your dentist may recommend visiting more often." },
-  { q: "Do you accept new patients?", a: "Yes. We are currently accepting new patients of all ages. Request an appointment online or call the office and our team will find a time that works." },
-  { q: "Do you accept dental insurance?", a: "We work with many dental plans. Because participation varies by plan and network, please contact the office with your insurance details so we can verify your specific coverage before your visit." },
-  { q: "What should I bring to my first appointment?", a: "Bring a photo ID, your dental insurance card if you have one, a list of current medications, and any recent X-rays or records from a previous dentist." },
-  { q: "What happens during a dental exam?", a: "We review your health history, examine your teeth, gums, bite and soft tissues, take any needed digital X-rays, and then walk you through the findings and your options." },
-  { q: "How much does a dental cleaning cost?", a: "Cost depends on the type of cleaning needed and your insurance coverage. Contact the office for an estimate — we provide pricing in writing before treatment begins." },
-  { q: "Do you offer emergency appointments?", a: "Yes. We reserve time for urgent needs and do our best to see emergency patients the same day. Call as early in the day as possible." },
-  { q: "Do you offer payment plans?", a: "We offer several payment options and can discuss third-party financing. Our team will review what is available for your treatment plan." },
+  { q: "Do you accept new patients?", a: "Yes. We welcome new patients of all ages. Request an appointment online or call the practice on 01943 608750 and our team will find a time that suits you." },
+  { q: "Do you offer NHS or private treatment?", a: "Placeholder answer: please confirm with the practice which treatment options are currently available and how they are funded, and we will list them here." },
+  { q: "What should I bring to my first appointment?", a: "Bring a list of any medicines you take, details of any medical conditions, and any recent X-rays or notes from a previous dentist." },
+  { q: "What happens during a dental check-up?", a: "We review your medical history, examine your teeth, gums, bite and soft tissues, take any X-rays needed, then talk you through the findings and your options." },
+  { q: "How much does a check-up or hygiene visit cost?", a: "Fees depend on the appointment and treatment needed. Please contact the practice for current fees — you will always receive a written estimate before treatment starts." },
+  { q: "Do you offer emergency appointments?", a: "Yes. We keep time aside for urgent problems and do our best to see emergency patients the same day. Please call as early in the day as possible." },
+  { q: "Do you offer payment plans?", a: "Placeholder answer: confirm with the practice which payment plans or finance options are available, and we will list them here." },
+
   { q: "Do you treat children?", a: "Yes. We see patients of all ages and take a calm, encouraging approach with children so early visits build confidence rather than fear." },
   { q: "Do you offer cosmetic dentistry?", a: "Yes — whitening, bonding, veneers and comprehensive smile makeovers, always planned around a healthy foundation first." },
   { q: "How long does teeth whitening take?", a: "In-office whitening is usually completed in one visit of roughly 60 to 90 minutes. Take-home systems typically take one to two weeks of short daily wear." },

@@ -10,11 +10,11 @@ import { CtaBand, PageHero, SectionHeading } from "@/components/site/ui";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: `About Our Practice | ${clinic.name} in [CITY], [STATE]` },
+      { title: `About Our Practice | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:
-          "Modern dentistry with personal care. Learn about our clinic story, philosophy, technology and patient experience in [CITY], [STATE].",
+          "Modern dentistry with personal care. Learn about our clinic story, philosophy, technology and patient experience in Ilkley, West Yorkshire.",
       },
       { property: "og:title", content: `About ${clinic.name}` },
       { property: "og:description", content: "Modern dentistry. Personal care. Learn our story and philosophy." },
@@ -51,7 +51,7 @@ function About() {
               <h2 className="font-display text-2xl font-bold text-primary">Our story</h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 Placeholder clinic story: describe when the practice opened, what motivated it, and
-                how it has grown alongside the [CITY] community. Replace this section with the
+                how it has grown alongside the Ilkley community. Replace this section with the
                 practice's real history before launch.
               </p>
             </div>

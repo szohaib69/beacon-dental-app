@@ -8,11 +8,11 @@ import { CtaBand, DemoNote, PageHero } from "@/components/site/ui";
 export const Route = createFileRoute("/team/")({
   head: () => ({
     meta: [
-      { title: `Meet Our Dentists in [CITY], [STATE] | ${clinic.name}` },
+      { title: `Meet Our Dentists in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         name: "description",
         content:
-          "Meet the dentists and hygienists caring for families across [CITY], [STATE] — their focus areas, education and approach to patient care.",
+          "Meet the dentists and hygienists caring for families across Ilkley, West Yorkshire — their focus areas, education and approach to patient care.",
       },
       { property: "og:title", content: "Meet Our Dental Team" },
       { property: "og:description", content: "The dentists and hygienists behind your care." },

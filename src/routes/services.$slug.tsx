@@ -17,11 +17,11 @@ export const Route = createFileRoute("/services/$slug")({
       return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
     }
     const s = loaderData.service;
-    const title = `${s.title} in [CITY], [STATE] | ${clinic.name}`;
+    const title = `${s.title} in Ilkley, West Yorkshire | ${clinic.name}`;
     return {
       meta: [
         { title },
-        { name: "description", content: `${s.short} Serving patients across [CITY], [STATE].` },
+        { name: "description", content: `${s.short} Serving patients across Ilkley, West Yorkshire.` },
         { property: "og:title", content: title },
         { property: "og:description", content: s.short },
         { property: "og:type", content: "article" },

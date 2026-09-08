@@ -87,11 +87,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${clinic.name} | Family & Cosmetic Dentist in [CITY], [STATE]` },
+      { title: `${clinic.name} | Family & Cosmetic Dentist in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:
-          "Comprehensive family, cosmetic and emergency dental care in [CITY], [STATE]. Accepting new patients with same-week appointments.",
+          "Comprehensive family, cosmetic and emergency dental care in Ilkley, West Yorkshire. Accepting new patients with same-week appointments.",
       },
       { property: "og:site_name", content: clinic.name },
       { property: "og:type", content: "website" },
@@ -125,7 +125,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressLocality: clinic.address.city,
             addressRegion: clinic.address.state,
             postalCode: clinic.address.zip,
-            addressCountry: "US",
+            addressCountry: "GB",
           },
           openingHours: ["Mo-Th 08:00-17:00", "Fr 08:00-14:00"],
           medicalSpecialty: "Dentistry",

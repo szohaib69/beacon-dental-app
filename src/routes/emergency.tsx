@@ -7,11 +7,11 @@ import { CtaBand, SectionHeading } from "@/components/site/ui";
 export const Route = createFileRoute("/emergency")({
   head: () => ({
     meta: [
-      { title: `Emergency Dentist in [CITY], [STATE] | ${clinic.name}` },
+      { title: `Emergency Dentist in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         name: "description",
         content:
-          "Need a dentist today? Same-day emergency dental care in [CITY], [STATE] for toothaches, broken teeth, knocked-out teeth, swelling and dental infections.",
+          "Need a dentist today? Same-day emergency dental care in Ilkley, West Yorkshire for toothaches, broken teeth, knocked-out teeth, swelling and dental infections.",
       },
       { property: "og:title", content: "Need a Dentist Today?" },
       { property: "og:description", content: "Same-day emergency dental care for urgent problems." },
@@ -108,7 +108,7 @@ function Emergency() {
               <li>• High fever with facial swelling</li>
             </ul>
             <p className="mt-5 text-sm font-semibold text-destructive">
-              In these situations, call 911 or go to the nearest emergency room.
+              In these situations, call 999 or go to your nearest A&E.
             </p>
           </div>
         </div>

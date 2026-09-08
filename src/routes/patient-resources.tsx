@@ -7,11 +7,11 @@ import { CtaBand, DemoNote, PageHero, SectionHeading } from "@/components/site/u
 export const Route = createFileRoute("/patient-resources")({
   head: () => ({
     meta: [
-      { title: `Patient Resources & Forms | ${clinic.name} in [CITY], [STATE]` },
+      { title: `Patient Resources & Forms | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:
-          "New patient information, what to expect at your first visit, printable forms, aftercare instructions and emergency guidance for our [CITY], [STATE] dental patients.",
+          "New patient information, what to expect at your first visit, printable forms, aftercare instructions and emergency guidance for our Ilkley, West Yorkshire dental patients.",
       },
       { property: "og:title", content: "Patient Resources" },
       { property: "og:description", content: "Forms, first-visit guidance and aftercare instructions." },
@@ -54,8 +54,8 @@ function PatientResources() {
             <div className="surface-card p-7">
               <h3 className="font-display text-lg font-bold text-primary">What to bring</h3>
               <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-muted-foreground">
-                <li>• A photo ID</li>
-                <li>• Your dental insurance card, if you have one</li>
+                <li>• Photo ID, if you have it</li>
+                <li>• Details of any medical conditions and medicines you take</li>
                 <li>• A list of current medications and known allergies</li>
                 <li>• Recent X-rays or records from a previous dentist, if available</li>
                 <li>• Completed intake forms, if you filled them out at home</li>

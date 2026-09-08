@@ -8,16 +8,16 @@ import { CtaBand, PageHero } from "@/components/site/ui";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: `Dental Services in [CITY], [STATE] | ${clinic.name}` },
+      { title: `Dental Services in Ilkley, West Yorkshire | ${clinic.name}` },
       {
         name: "description",
         content:
-          "General, cosmetic, restorative, implant, pediatric, orthodontic and emergency dentistry — complete dental care under one roof in [CITY], [STATE].",
+          "General, cosmetic, restorative, implant, pediatric, orthodontic and emergency dentistry — complete dental care under one roof in Ilkley, West Yorkshire.",
       },
       { property: "og:title", content: "Complete Dental Care Under One Roof" },
       {
         property: "og:description",
-        content: "Explore every dental service offered at our [CITY], [STATE] practice.",
+        content: "Explore every dental service offered at our Ilkley, West Yorkshire practice.",
       },
       { property: "og:url", content: "/services" },
     ],
