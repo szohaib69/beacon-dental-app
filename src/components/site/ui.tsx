@@ -65,16 +65,20 @@ export function PageHero({
   );
 }
 
+const buttonBase =
+  "inline-flex min-h-12 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-sm font-semibold sm:w-auto md:text-base";
+
 export function BookButton({ className, label = "Book an Appointment" }: { className?: string; label?: string }) {
   return (
     <Link
       to="/book-appointment"
       className={cn(
-        "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift md:text-base",
+        buttonBase,
+        "bg-primary text-primary-foreground shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift",
         className,
       )}
     >
-      <CalendarCheck className="size-4" aria-hidden="true" />
+      <CalendarCheck className="size-4 shrink-0" aria-hidden="true" />
       {label}
     </Link>
   );
@@ -85,11 +89,12 @@ export function CallButton({ className, label }: { className?: string; label?: s
     <a
       href={clinic.contact.phoneHref}
       className={cn(
-        "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold text-primary transition-colors hover:bg-secondary md:text-base",
+        buttonBase,
+        "border border-border bg-background text-primary transition-colors hover:bg-secondary",
         className,
       )}
     >
-      <Phone className="size-4" aria-hidden="true" />
+      <Phone className="size-4 shrink-0" aria-hidden="true" />
       {label ?? `Call ${clinic.contact.phoneDisplay}`}
     </a>
   );
