@@ -12,6 +12,7 @@ import { ServiceIcon } from "@/components/site/ServiceIcon";
 import { Testimonials } from "@/components/site/Testimonials";
 import { FaqAccordion } from "@/components/site/FaqAccordion";
 import { SectionHeading, CtaBand, DemoNote, Stars } from "@/components/site/ui";
+import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
