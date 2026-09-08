@@ -18,7 +18,7 @@ export function SectionHeading({
   as?: "h1" | "h2";
 }) {
   return (
-    <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
+    <Reveal className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
       {eyebrow && (
         <p className="eyebrow">
           <span className="h-px w-6 bg-accent" aria-hidden="true" />
@@ -29,7 +29,7 @@ export function SectionHeading({
       {description && (
         <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">{description}</p>
       )}
-    </div>
+    </Reveal>
   );
 }
 
