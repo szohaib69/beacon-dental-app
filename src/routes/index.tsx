@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ArrowRight, Check, CalendarCheck, Phone, MapPin, Clock } from "lucide-react";
 import heroImg from "@/assets/hero-clinic.jpg";
 import consultImg from "@/assets/consult.jpg";
