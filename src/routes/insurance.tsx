@@ -6,7 +6,7 @@ import { CtaBand, DemoNote, PageHero, SectionHeading } from "@/components/site/u
 export const Route = createFileRoute("/insurance")({
   head: () => ({
     meta: [
-      { title: `Dental Insurance & Financing | ${clinic.name} in Ilkley, West Yorkshire` },
+      { title: `Dental Fees & Payment Options | ${clinic.name} in Ilkley, West Yorkshire` },
       {
         name: "description",
         content:

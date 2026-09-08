@@ -125,7 +125,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressLocality: clinic.address.city,
             addressRegion: clinic.address.state,
             postalCode: clinic.address.zip,
-            addressCountry: "US",
+            addressCountry: "GB",
           },
           openingHours: ["Mo-Th 08:00-17:00", "Fr 08:00-14:00"],
           medicalSpecialty: "Dentistry",
