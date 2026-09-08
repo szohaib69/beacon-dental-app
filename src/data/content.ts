@@ -58,13 +58,14 @@ export const beforeAfter = [
 
 export const faqs = [
   { q: "How often should I visit the dentist?", a: "Most patients benefit from an exam and professional cleaning every six months. If you have gum disease, a high cavity rate or specific medical conditions, your dentist may recommend visiting more often." },
-  { q: "Do you accept new patients?", a: "Yes. We are currently accepting new patients of all ages. Request an appointment online or call the office and our team will find a time that works." },
-  { q: "Do you accept dental insurance?", a: "We work with many dental plans. Because participation varies by plan and network, please contact the office with your insurance details so we can verify your specific coverage before your visit." },
-  { q: "What should I bring to my first appointment?", a: "Bring a photo ID, your dental insurance card if you have one, a list of current medications, and any recent X-rays or records from a previous dentist." },
-  { q: "What happens during a dental exam?", a: "We review your health history, examine your teeth, gums, bite and soft tissues, take any needed digital X-rays, and then walk you through the findings and your options." },
-  { q: "How much does a dental cleaning cost?", a: "Cost depends on the type of cleaning needed and your insurance coverage. Contact the office for an estimate — we provide pricing in writing before treatment begins." },
-  { q: "Do you offer emergency appointments?", a: "Yes. We reserve time for urgent needs and do our best to see emergency patients the same day. Call as early in the day as possible." },
-  { q: "Do you offer payment plans?", a: "We offer several payment options and can discuss third-party financing. Our team will review what is available for your treatment plan." },
+  { q: "Do you accept new patients?", a: "Yes. We welcome new patients of all ages. Request an appointment online or call the practice on 01943 608750 and our team will find a time that suits you." },
+  { q: "Do you offer NHS or private treatment?", a: "Placeholder answer: please confirm with the practice which treatment options are currently available and how they are funded, and we will list them here." },
+  { q: "What should I bring to my first appointment?", a: "Bring a list of any medicines you take, details of any medical conditions, and any recent X-rays or notes from a previous dentist." },
+  { q: "What happens during a dental check-up?", a: "We review your medical history, examine your teeth, gums, bite and soft tissues, take any X-rays needed, then talk you through the findings and your options." },
+  { q: "How much does a check-up or hygiene visit cost?", a: "Fees depend on the appointment and treatment needed. Please contact the practice for current fees — you will always receive a written estimate before treatment starts." },
+  { q: "Do you offer emergency appointments?", a: "Yes. We keep time aside for urgent problems and do our best to see emergency patients the same day. Please call as early in the day as possible." },
+  { q: "Do you offer payment plans?", a: "Placeholder answer: confirm with the practice which payment plans or finance options are available, and we will list them here." },
+
   { q: "Do you treat children?", a: "Yes. We see patients of all ages and take a calm, encouraging approach with children so early visits build confidence rather than fear." },
   { q: "Do you offer cosmetic dentistry?", a: "Yes — whitening, bonding, veneers and comprehensive smile makeovers, always planned around a healthy foundation first." },
   { q: "How long does teeth whitening take?", a: "In-office whitening is usually completed in one visit of roughly 60 to 90 minutes. Take-home systems typically take one to two weeks of short daily wear." },
