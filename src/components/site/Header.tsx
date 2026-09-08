@@ -42,7 +42,7 @@ export function Header() {
       <div className="container-page">
         <div
           className={cn(
-            "flex items-center justify-between gap-4 transition-all duration-300",
+            "flex items-center justify-between gap-2 transition-all duration-300 2xl:gap-4",
             scrolled ? "h-16" : "h-20",
           )}
         >
@@ -58,7 +58,7 @@ export function Header() {
                     to={item.to}
                     activeOptions={{ exact: item.to === "/" }}
                     activeProps={{ className: "text-primary bg-secondary" }}
-                    className="whitespace-nowrap rounded-full px-3 py-2 text-[0.875rem] font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+                    className="whitespace-nowrap rounded-full px-2 py-2 text-[0.8125rem] font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-primary 2xl:px-3 2xl:text-[0.875rem]"
                   >
                     {item.label}
                   </Link>
