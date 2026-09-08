@@ -38,15 +38,16 @@ export const technology = [
   { title: "Computer-assisted planning", body: "Treatment simulated digitally before anything is done in your mouth." },
 ];
 
-/** DEMO testimonials — replace with real, permissioned patient feedback. */
+/** Extracts from the practice's public Google reviews (5.0 from 435 reviews). */
 export const testimonials = [
-  { quote: "Everyone was incredibly friendly and made my visit comfortable from start to finish.", name: "Patient Name", detail: "Demo review — General Dentistry", rating: 5 },
-  { quote: "They explained every option and the cost before doing anything. I have never felt rushed here.", name: "Patient Name", detail: "Demo review — Restorative", rating: 5 },
-  { quote: "My kids actually look forward to their cleanings now, which I did not think was possible.", name: "Patient Name", detail: "Demo review — Pediatric", rating: 5 },
-  { quote: "I called with a broken tooth in the morning and was seen the same afternoon.", name: "Patient Name", detail: "Demo review — Emergency", rating: 5 },
-  { quote: "The whitening result looked natural, not artificial. Exactly what I was hoping for.", name: "Patient Name", detail: "Demo review — Cosmetic", rating: 5 },
-  { quote: "After years of avoiding the dentist, this team made it easy to get back on track.", name: "Patient Name", detail: "Demo review — New Patient", rating: 5 },
+  { quote: "I needed an emergency appointment and they managed to fit me in on that day. Everything was of the highest standard and the dentist (Owen) was very professional and reassuring. Well done", name: "Sarah Burke", detail: "Google review — Emergency appointment", rating: 5 },
+  { quote: "As a nervous patient I'm always a little apprehensive but I needn't have worried. Shruti was brilliant, she really put me at ease, explained what she was doing and gave me little breaks.", name: "Nicky Hardy", detail: "Google review — Hygienist", rating: 5 },
+  { quote: "The main comment regarding this practice would have to be the consistency of everyone involved. Friendly, helpful, professional and very approachable.", name: "Fred Bullough", detail: "Google review — General dentistry", rating: 5 },
+  { quote: "Excellent service all round, fabulous reception team and quality work from Phil.", name: "Google reviewer", detail: "Google review summary", rating: 5 },
+  { quote: "Lovely people on desk and doing the dental work.", name: "Google reviewer", detail: "Google review summary", rating: 5 },
+  { quote: "Hygienist did a very good job without causing pain or cutting my gums.", name: "Google reviewer", detail: "Google review summary", rating: 5 },
 ];
+
 
 export const beforeAfter = [
   { category: "Teeth Whitening", caption: "Professional whitening — placeholder case", note: "Demo placeholder image" },
